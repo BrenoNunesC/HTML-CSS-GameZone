@@ -1,0 +1,553 @@
+/* ================================================
+   ESTILIZAÇÃO GERAL - GameZone
+   Plataforma de Jogos Online
+   ================================================ */
+
+/* Seletor de tag: Estilos gerais para toda a página */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cor de fundo da página e fonte padrão */
+body {
+    background-color: #f5f7fa;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ================================================
+   CABEÇALHO PRINCIPAL (id)
+   ================================================ */
+
+#cabecalho-principal {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 5px solid #764ba2;
+}
+
+/* Seletor de tag: Estilo do h1 com tamanho e alinhamento */
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Seletor de classe: Subtítulo com cor diferente */
+.subtitulo {
+    font-size: 1.3em;
+    font-weight: 300;
+    color: #e0e0e0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* ================================================
+   NAVEGAÇÃO (Estilização de lista)
+   ================================================ */
+
+.navegacao {
+    background-color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+/* Seletor de tag: Lista sem ponto */
+.navegacao ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.navegacao li {
+    padding: 10px;
+}
+
+/* Seletor agrupado: Links com hover effect */
+.navegacao a,
+.link-footer {
+    text-decoration: none;
+    color: #667eea;
+    font-weight: 600;
+    padding: 8px 15px;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+/* Efeito hover nos links (Extra) */
+.navegacao a:hover,
+.link-footer:hover {
+    background-color: #667eea;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.link-ativo {
+    border-bottom: 3px solid #667eea;
+}
+
+/* ================================================
+   SEÇÃO DE BOAS-VINDAS
+   ================================================ */
+
+.secao-boas-vindas {
+    background-color: white;
+    padding: 40px;
+    margin: 40px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    border-left: 5px solid #667eea;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.secao-boas-vindas h2 {
+    color: #667eea;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.secao-boas-vindas p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* ================================================
+   SEÇÃO DE CURSOS (Box Model: padding, margin, border)
+   ================================================ */
+
+.secao-cursos {
+    padding: 40px 20px;
+    background-color: #f5f7fa;
+}
+
+/* Seletor de classe: Título da seção */
+.titulo-secao {
+    color: #764ba2;
+    font-size: 2.2em;
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Container para os cartões de cursos */
+.container-cursos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cartão do curso - Box Model com margin, padding e border */
+.cartao-curso {
+    background-color: white;
+    padding: 25px;
+    margin: 10px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Efeito hover no cartão */
+.cartao-curso:hover {
+    border-color: #667eea;
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.2);
+    transform: translateY(-5px);
+}
+
+.cartao-curso h3 {
+    color: #667eea;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.cartao-curso p {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 0.95em;
+}
+
+/* ================================================
+   ESTILIZAÇÃO DE LISTA (Requisito: 3 propriedades)
+   ================================================ */
+
+.lista-conteudo {
+    list-style: none;
+    padding-left: 0;
+    margin: 20px 0;
+}
+
+.lista-conteudo li {
+    padding: 8px 0 8px 25px;
+    position: relative;
+    color: #555;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* Pseudoelemento para criar marcador customizado */
+.lista-conteudo li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #667eea;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* ================================================
+   BOTÃO (Estilização adicional)
+   ================================================ */
+
+.botao {
+    background-color: #667eea;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 6px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+}
+
+.botao:hover {
+    background-color: #764ba2;
+    transform: scale(1.05);
+}
+
+/* ================================================
+   SEÇÃO DE CARACTERÍSTICAS
+   ================================================ */
+
+.secao-caracteristicas {
+    padding: 40px 20px;
+    background-color: white;
+    margin: 40px 0;
+}
+
+.lista-caracteristicas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Seletor de classe: Cada característica */
+.caracteristica {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    border-top: 4px solid #667eea;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.caracteristica:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.caracteristica h4 {
+    color: #764ba2;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.caracteristica p {
+    color: #666;
+    font-size: 0.95em;
+}
+
+/* ================================================
+   SEÇÃO DE ESTATÍSTICAS
+   ================================================ */
+
+.secao-stats {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.secao-stats h2 {
+    font-size: 2.2em;
+    margin-bottom: 40px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Seletor de classe: Cada estatística */
+.stat {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.numero {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.descricao {
+    font-size: 1.1em;
+    font-weight: 300;
+}
+
+/* ================================================
+   RODAPÉ (id)
+   ================================================ */
+
+#contato {
+    background-color: #2c3e50;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 4px solid #667eea;
+}
+
+#contato h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #667eea;
+}
+
+#contato p {
+    margin: 10px 0;
+    font-size: 1em;
+}
+
+#contato a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#contato a:hover {
+    text-decoration: underline;
+    color: #764ba2;
+}
+
+/* ================================================
+   SEÇÃO INTRODUÇÃO (Segunda página)
+   ================================================ */
+
+.secao-introducao {
+    background-color: white;
+    padding: 40px;
+    margin: 40px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    border-left: 5px solid #667eea;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.secao-introducao h2 {
+    color: #667eea;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.secao-introducao p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* ================================================
+   SEÇÃO DE MEMBROS (Segunda página)
+   ================================================ */
+
+.secao-membros {
+    padding: 40px 20px;
+    background-color: #f5f7fa;
+}
+
+.container-membros {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cartão do membro - Box Model */
+.cartao-membro {
+    background-color: white;
+    padding: 25px;
+    margin: 10px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.1);
+    transition: all 0.3s ease;
+}
+
+.cartao-membro:hover {
+    border-color: #667eea;
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.2);
+    transform: translateY(-5px);
+}
+
+.cartao-membro h3 {
+    color: #667eea;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.rank {
+    color: #764ba2;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.cartao-membro p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Lista de conquistas */
+.lista-conquistas {
+    list-style: none;
+    padding-left: 0;
+    margin: 15px 0;
+}
+
+.lista-conquistas li {
+    padding: 8px 0 8px 25px;
+    position: relative;
+    color: #555;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.lista-conquistas li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #667eea;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* ================================================
+   SEÇÃO DE EVENTOS (Segunda página)
+   ================================================ */
+
+.secao-eventos {
+    padding: 40px 20px;
+    background-color: white;
+    margin: 40px 0;
+}
+
+.lista-eventos-plataforma {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Seletor de classe: Cada evento */
+.evento {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    border-top: 4px solid #667eea;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.evento:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.evento h4 {
+    color: #764ba2;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.evento p {
+    color: #666;
+    font-size: 0.95em;
+    margin: 8px 0;
+}
+
+/* ================================================
+   SEÇÃO DE DICAS (Segunda página)
+   ================================================ */
+
+.secao-dicas {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.secao-dicas h2 {
+    font-size: 2.2em;
+    margin-bottom: 40px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ================================================
+   RESPONSIVIDADE (Mobile)
+   ================================================ */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .titulo-secao {
+        font-size: 1.8em;
+    }
+
+    .navegacao ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .container-jogos,
+    .container-membros {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+
+    .secao-introducao {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .lista-eventos-plataforma {
+        grid-template-columns: 1fr;
+    }
+}
